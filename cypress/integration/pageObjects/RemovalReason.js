@@ -1,3 +1,4 @@
+
 import DashboardPage from "./DashboardPage"
 
 class RemovalReason extends DashboardPage {
@@ -24,8 +25,15 @@ class RemovalReason extends DashboardPage {
 
     typeTitle(){
         let title = cy.get('#addNewGeneralRemovalReasonTitle')
-        title.type('picture')
+        //title.type('picture')
+        let generateRanddomString = function(){
+            return Math.random().toString(20).substr(2,6)
+        }
+       title.type(generateRanddomString())
+       
     }
+
+    
 
     typeDdescription(text){
         let description = cy.get('#addNewGeneralRemovalReasonDescription').type(text)

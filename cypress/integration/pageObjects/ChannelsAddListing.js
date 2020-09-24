@@ -20,7 +20,8 @@ class ChannelsAddListing extends Listing {
     }
 
     selectParticularProject() {
-        let projectParticular = cy.get('li').contains('bol test')
+        let projectParticular = cy.get('li[class="menu__item menu__item--active"]')
+        // cy.get('li').contains('bol test')
         //('.menu>li:nth-child(2)')
         projectParticular.click()
        

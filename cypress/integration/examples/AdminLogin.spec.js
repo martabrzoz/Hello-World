@@ -40,7 +40,7 @@ describe('CustomSuite', function () {
         cy.saveLocalStorage();
     });
 
-    it.only('Dashboard', function () {
+    it('Dashboard', function () {
         let translate = new Translations()
         translate.editTranslations()
         translate.updateBtn()
@@ -213,7 +213,7 @@ describe('CustomSuite', function () {
         onbaording.addUser()
     })
 
-    it('Go to Removal Reason', function () {
+    it.only('Go to Removal Reason', function () {
         let dash = new DashboardPage()
         dash.clickHamburgerMenu()
         let removal = new RemovalReason()
