@@ -18,10 +18,12 @@ class Actors extends DashboardPage {
     associateActors(){
         let checkbox = cy.get('input.checkbox__input').eq(2)
         checkbox.check()
+        
         let checkboxS = cy.get('input.checkbox__input').eq(3)
         checkboxS.check()
         let associateBtn = cy.get('button.button.button--defaultSize.button--warning')
         associateBtn.click()
+        let test;
     }
 
     filter(){
