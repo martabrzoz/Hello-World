@@ -23,7 +23,7 @@ class Actors extends DashboardPage {
         checkboxS.check()
         let associateBtn = cy.get('button.button.button--defaultSize.button--warning')
         associateBtn.click()
-        let test;
+        
     }
 
     filter(){

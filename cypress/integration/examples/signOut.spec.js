@@ -51,7 +51,7 @@ describe('CustomSuite', function () {
         settings.lastName()
         settings.eMail()
         settings.phone() 
-        settings.extension('elo melo piec ddwa zero')
+        settings.extension('+48')
         settings.save()
         settings.userNameMenu()
     })

@@ -40,7 +40,7 @@ describe('CustomSuite', function () {
         cy.saveLocalStorage();
     });
 
-    it('Dashboard', function () {
+    it.only('Dashboard', function () {
         let translate = new Translations()
         translate.editTranslations()
         translate.updateBtn()
@@ -54,6 +54,8 @@ describe('CustomSuite', function () {
         translate.unclickEditTrans()
         let dashboard = new DashboardPage()
         dashboard.clickHamburgerMenu()
+        //dashboard.selectAppStores()
+        //dashboard.selectWebstores()
         dashboard.selectMarketplaces()
     })
 
