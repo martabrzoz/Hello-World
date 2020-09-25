@@ -8,44 +8,57 @@ class RemovalReason extends DashboardPage {
         removal.click()
     }
 
-    addGeneralReason()  {
+    addGeneralReason() {
         let generalBtn = cy.get('.removalReason__chip.removalReason__chip--big.removalReason__chip--marginRight')
         generalBtn.click()
     }
 
-    addCategory(){
+    addCategory() {
         let category = cy.get('#addNewGeneralRemovalReasonCategory')
         category.click()
     }
 
-    copyright(){
+    copyright() {
         let copy = cy.get('li').contains('copyright')
         copy.click()
     }
 
-    typeTitle(){
+    typeTitle() {
         let title = cy.get('#addNewGeneralRemovalReasonTitle')
         //title.type('picture')
-        let generateRanddomString = function(){
-            return Math.random().toString(20).substr(2,6)
+        let generateRandomString = function () {
+            return Math.random().toString(20).substr(2, 6)
         }
-       title.type(generateRanddomString())
-       
+        title.type('picture' + generateRandomString())
+
     }
 
-    
 
-    typeDdescription(text){
+
+    typeDdescription(text) {
         let description = cy.get('#addNewGeneralRemovalReasonDescription').type(text)
         //description.type('Harry')
     }
 
-    create(){
+    create() {
         let createBtn = cy.get('button').contains('Create')
-        createBtn.click({force:true})
+        createBtn.click({ force: true })
     }
 
-  
+    removeReason(){
+        let trash = cy.get('div:nth-child(5) [class="removalReasonColumn__actionIconContainer removalReasonColumn__actionIconContainer--trash"]')
+        //cy.get('div[class="removalReasonColumn__actionIconContainer removalReasonColumn__actionIconContainer--trash"]').eq(2)
+        trash.click()
+    }
+
+    accept(){
+        let acceptBtn = cy.get('button').contains('Accept')
+        acceptBtn.click({force:true})
+    }
+
+
+
+
 }
 
 export default RemovalReason

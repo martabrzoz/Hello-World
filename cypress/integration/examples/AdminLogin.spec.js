@@ -227,6 +227,8 @@ describe('CustomSuite', function () {
         cy.get('div[class="removalReasonColumn__actionIconContainer removalReasonColumn__actionIconContainer--move"]').eq(3).trigger('dragstart')
         cy.get('div[class="removalReasonColumn__actionIconContainer removalReasonColumn__actionIconContainer--move"]').eq(4).trigger('drop')
         //.drag('.removalReason__dustbinContainer', move({ x: 100, y: 100 }) )
+        removal.removeReason()
+        //removal.accept()
 
         /* var MyDataTransfer = function () { };
          var dt = new MyDataTransfer();
